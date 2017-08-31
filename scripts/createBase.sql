@@ -1,3 +1,4 @@
+drop database `db`;
 -- -----------------------------------------------------
 -- Schema db
 -- -----------------------------------------------------
@@ -25,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `db`.`aluno` (
   CONSTRAINT `fk_aluno_instituicao1`
     FOREIGN KEY (`instituicao_id`)
     REFERENCES `db`.`instituicao` (`id`)
-)
+);
 CREATE INDEX `fk_aluno_instituicao1_idx` ON `db`.`aluno` (`instituicao_id` ASC);
 
 
