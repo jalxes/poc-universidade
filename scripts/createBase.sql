@@ -96,28 +96,28 @@ CREATE INDEX `fk_disciplina_has_curso_disciplina_idx` ON `db`.`disciplina_has_cu
 CREATE TABLE IF NOT EXISTS `db`.`professor` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NULL DEFAULT NULL,
-  `curso_id` INT(11) NOT NULL,
+  `disciplina_id` INT(11) NOT NULL,
   `instituicao_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `curso_id`, `instituicao_id`),
-  CONSTRAINT `fk_professor_curso1`
-    FOREIGN KEY (`curso_id`)
+  PRIMARY KEY (`id`, `disciplina_id`, `instituicao_id`),
+  CONSTRAINT `fk_professor_disciplina1`
+    FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`curso` (`id`),
   CONSTRAINT `fk_professor_instituicao1`
     FOREIGN KEY (`instituicao_id`)
     REFERENCES `db`.`instituicao` (`id`)
 );
-CREATE INDEX `fk_professor_curso1_idx` ON `db`.`professor` (`curso_id` ASC);
+CREATE INDEX `fk_professor_curso1_idx` ON `db`.`professor` (`disciplina_id` ASC);
 CREATE INDEX `fk_professor_instituicao1_idx` ON `db`.`professor` (`instituicao_id` ASC);
 
 
 -- -----------------------------------------------------
--- Table `db`.`faltas`
+-- Table `db`.`falta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db`.`faltas` (
+CREATE TABLE IF NOT EXISTS `db`.`falta` (
   `aluno_id` INT(11) NOT NULL,
   `disciplina_id` INT(11) NOT NULL,
-  `faltascol` DATETIME NOT NULL,
-  PRIMARY KEY (`aluno_id`, `disciplina_id`, `faltascol`),
+  `falta` DATETIME NOT NULL,
+  PRIMARY KEY (`aluno_id`, `disciplina_id`, `falta`),
   CONSTRAINT `fk_aluno_has_disciplina1_aluno1`
     FOREIGN KEY (`aluno_id`)
     REFERENCES `db`.`aluno` (`id`),
@@ -125,8 +125,8 @@ CREATE TABLE IF NOT EXISTS `db`.`faltas` (
     FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`disciplina` (`id`)
 );
-CREATE INDEX `fk_aluno_has_faltas_disciplina` ON `db`.`faltas` (`disciplina_id` ASC);
-CREATE INDEX `fk_aluno_has_faltas_aluno` ON `db`.`faltas` (`aluno_id` ASC);
+CREATE INDEX `fk_aluno_has_falta_disciplina` ON `db`.`falta` (`disciplina_id` ASC);
+CREATE INDEX `fk_aluno_has_falta_aluno` ON `db`.`falta` (`aluno_id` ASC);
 
 
 -- -----------------------------------------------------
