@@ -1,3 +1,4 @@
+drop database `db`;
 -- -----------------------------------------------------
 -- Schema db
 -- -----------------------------------------------------
@@ -25,8 +26,7 @@ CREATE TABLE IF NOT EXISTS `db`.`aluno` (
   CONSTRAINT `fk_aluno_instituicao1`
     FOREIGN KEY (`instituicao_id`)
     REFERENCES `db`.`instituicao` (`id`)
-)
-CREATE INDEX `fk_aluno_instituicao1_idx` ON `db`.`aluno` (`instituicao_id` ASC);
+);
 
 
 -- -----------------------------------------------------
@@ -52,8 +52,6 @@ CREATE TABLE IF NOT EXISTS `db`.`aluno_has_disciplina` (
     FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`disciplina` (`id`)
 );
-CREATE INDEX `fk_aluno_has_disciplina_disciplina1_idx` ON `db`.`aluno_has_disciplina` (`disciplina_id` ASC);
-CREATE INDEX `fk_aluno_has_disciplina_aluno1_idx` ON `db`.`aluno_has_disciplina` (`aluno_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -68,7 +66,6 @@ CREATE TABLE IF NOT EXISTS `db`.`curso` (
     FOREIGN KEY (`instituicao_id`)
     REFERENCES `db`.`instituicao` (`id`)
 );
-CREATE INDEX `fk_curso_instituicao1_idx` ON `db`.`curso` (`instituicao_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -85,8 +82,6 @@ CREATE TABLE IF NOT EXISTS `db`.`disciplina_has_curso` (
     FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`disciplina` (`id`)
 );
-CREATE INDEX `fk_disciplina_has_curso_curso1_idx` ON `db`.`disciplina_has_curso` (`curso_id` ASC);
-CREATE INDEX `fk_disciplina_has_curso_disciplina_idx` ON `db`.`disciplina_has_curso` (`disciplina_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -105,8 +100,6 @@ CREATE TABLE IF NOT EXISTS `db`.`professor` (
     FOREIGN KEY (`instituicao_id`)
     REFERENCES `db`.`instituicao` (`id`)
 );
-CREATE INDEX `fk_professor_curso1_idx` ON `db`.`professor` (`curso_id` ASC);
-CREATE INDEX `fk_professor_instituicao1_idx` ON `db`.`professor` (`instituicao_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -124,8 +117,6 @@ CREATE TABLE IF NOT EXISTS `db`.`faltas` (
     FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`disciplina` (`id`)
 );
-CREATE INDEX `fk_aluno_has_faltas_disciplina` ON `db`.`faltas` (`disciplina_id` ASC);
-CREATE INDEX `fk_aluno_has_faltas_aluno` ON `db`.`faltas` (`aluno_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -144,8 +135,6 @@ CREATE TABLE IF NOT EXISTS `db`.`nota` (
     FOREIGN KEY (`disciplina_id`)
     REFERENCES `db`.`disciplina` (`id`)
 );
-CREATE INDEX `fk_aluno_has_nota_disciplina` ON `db`.`nota` (`disciplina_id` ASC);
-CREATE INDEX `fk_aluno_has_nota_aluno` ON `db`.`nota` (`aluno_id` ASC);
 
 -- -----------------------------------------------------
 -- Table `db`.`aluno_has_curso`
@@ -161,5 +150,3 @@ CREATE TABLE IF NOT EXISTS `db`.`aluno_has_curso` (
     FOREIGN KEY (`curso_id`)
     REFERENCES `db`.`curso` (`id`)
 );
-CREATE INDEX `fk_aluno_has_curso_curso1_idx` ON `db`.`aluno_has_curso` (`curso_id` ASC);
-CREATE INDEX `fk_aluno_has_curso_aluno1_idx` ON `db`.`aluno_has_curso` (`aluno_id` ASC);
