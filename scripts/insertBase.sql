@@ -55,7 +55,27 @@ insert into `disciplina_has_curso` (`disciplina_id`, `curso_id`) values (2, 1);
 insert into `disciplina_has_curso` (`disciplina_id`, `curso_id`) values (3, 2);
 insert into `disciplina_has_curso` (`disciplina_id`, `curso_id`) values (4, 2);
 
--- insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  "aluno_id",  `disciplina_id`,  `falta`);
---
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  1,  1,  ADDDATE(NOW(), INTERVAL 1 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  1,  2,  ADDDATE(NOW(), INTERVAL 1 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  1,  2,  ADDDATE(NOW(), INTERVAL 2 DAY));
+
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  2,  1,  ADDDATE(NOW(), INTERVAL 0 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  2,  1,  ADDDATE(NOW(), INTERVAL 2 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  2,  2,  ADDDATE(NOW(), INTERVAL 0 DAY));
+
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  4,  1,  ADDDATE(NOW(), INTERVAL 0 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  4,  1,  ADDDATE(NOW(), INTERVAL 2 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  4,  2,  ADDDATE(NOW(), INTERVAL 2 DAY));
+
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  6,  3,  ADDDATE(NOW(), INTERVAL 2 DAY));
+
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  7,  4,  ADDDATE(NOW(), INTERVAL 0 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  7,  4,  ADDDATE(NOW(), INTERVAL 1 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  7,  4,  ADDDATE(NOW(), INTERVAL 2 DAY));
+
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  8,  3,  ADDDATE(NOW(), INTERVAL 1 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  8,  3,  ADDDATE(NOW(), INTERVAL 2 DAY));
+insert into `falta` (  `aluno_id`,  `disciplina_id`,  `falta`) values (  8,  4,  ADDDATE(NOW(), INTERVAL 1 DAY));
+
 -- insert into `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) values (  "aluno_id",  `disciplina_id`,  `nota`, `data`);
 --
