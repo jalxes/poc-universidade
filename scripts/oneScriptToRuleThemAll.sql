@@ -269,3 +269,27 @@ INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  7
 
 INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  8,  3,  5, ADDDATE(NOW(), INTERVAL 0 DAY));
 INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  8,  4,  4, ADDDATE(NOW(), INTERVAL 0 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  1,  1,  07, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  1,  2,  04, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  2,  1,  02, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  2,  2,  08, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  3,  1,  10, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  3,  2,  10, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  4,  1,  5, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  4,  2,  4, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  5,  3,  6, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  5,  4,  6, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  6,  3,  9, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  6,  4,  1, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  7,  3,  7, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  7,  4,  5, ADDDATE(NOW(), INTERVAL 3 DAY));
+
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  8,  3,  5, ADDDATE(NOW(), INTERVAL 3 DAY));
+INSERT INTO `nota` (  `aluno_id`,  `disciplina_id`,  `nota`, `data`) VALUES (  8,  4,  4, ADDDATE(NOW(), INTERVAL 3 DAY));
